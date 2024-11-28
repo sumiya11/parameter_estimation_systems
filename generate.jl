@@ -2,8 +2,8 @@ using ParameterEstimation, Pkg
 
 Pkg.activate("env")
 
-ParameterEstimation.OUTPUT_DIR[] = "/home/ademin/parameter_estimation_systems/examples/global"
-PREFIX = "/home/ademin/ParameterEstimation.jl/examples/all-global"
+ParameterEstimation.OUTPUT_DIR[] = "/home/ademin/parameter_estimation_systems/examples/unidentifiable"
+PREFIX = "/home/ademin/ParameterEstimation.jl/examples/unidentifiable"
 
 
 # Only globally identifiable examples
