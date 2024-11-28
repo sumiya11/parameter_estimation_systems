@@ -1,0 +1,7 @@
+System of length 4
+ 4 variables: mu_0, x_0, x_1, x_2
+
+ 1.563 - x_0 - x_0^2
+ x_1 + x_0*mu_0
+ -1.14597960147617 - x_1 - 2*x_1*x_0
+ x_2 + x_1*mu_0
