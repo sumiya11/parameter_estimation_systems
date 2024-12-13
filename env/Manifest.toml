@@ -1633,7 +1633,7 @@ version = "0.4.0"
 
 [[deps.ParameterEstimation]]
 deps = ["ArbNumerics", "BaryRational", "DifferentialEquations", "ForwardDiff", "Groebner", "HomotopyContinuation", "LinearAlgebra", "LinearSolve", "Logging", "ModelingToolkit", "Nemo", "OrderedCollections", "PrecompileTools", "Printf", "ProgressMeter", "SIAN", "StructuralIdentifiability", "Suppressor", "Symbolics", "TaylorDiff", "TaylorSeries", "Test", "TestSetExtensions"]
-path = "../ParameterEstimation.jl"
+path = "../../ParameterEstimation.jl"
 uuid = "b4cd1eb8-1e24-11e8-3319-93036a3eb9f3"
 version = "0.4.0"
 

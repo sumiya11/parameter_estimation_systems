@@ -1,9 +1,11 @@
-using ParameterEstimation, Pkg
+using Pkg
 
 Pkg.activate("env")
 
-ParameterEstimation.OUTPUT_DIR[] = "/home/ademin/parameter_estimation_systems/examples/unidentifiable"
-PREFIX = "/home/ademin/ParameterEstimation.jl/examples/unidentifiable"
+using ParameterEstimation
+
+ParameterEstimation.OUTPUT_DIR[] = "examples/new"
+PREFIX = joinpath((@__DIR__), "ODEs")
 
 
 # Only globally identifiable examples
