@@ -5,7 +5,7 @@ using ParameterEstimation
 using ModelingToolkit, DifferentialEquations
 solver = Vern9()
 
-# Set the following parameters to 1.0 : a, alpha, gamma.
+# Set the following parameters to 0.1 : a, alpha, gamma.
 @parameters b00 b01 b10 beta01 beta10 beta11 c0001 c0010 c0011 c0111 c1011
 @variables t KS00(t) KS01(t) KS10(t) FS01(t) FS10(t) FS11(t) K(t) F(t) S00(t) S01(t) S10(t) S11(t) y1(t) y2(t) y3(t) y4(t) y5(t)
 D = Differential(t)
