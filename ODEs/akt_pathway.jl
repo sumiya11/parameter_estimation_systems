@@ -55,6 +55,8 @@ data_sample = ParameterEstimation.sample_data(model, measured_quantities, time_i
         p_true, ic, datasize; solver = solver, abstol = 1.0e-14, reltol = 1.0e-14)
 
 @info "" data_sample
+println(parameters)
+println(p_true)
 
 res = ParameterEstimation.estimate(model, measured_quantities, data_sample;
         solver = solver)

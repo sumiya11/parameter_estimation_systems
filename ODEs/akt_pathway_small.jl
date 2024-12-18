@@ -56,6 +56,7 @@ p_true = [0.1 + i*(1 / (2length(parameters))) for i in 1:length(parameters)]
 data_sample = ParameterEstimation.sample_data(model, measured_quantities, time_interval,
         p_true, ic, datasize; solver = solver, abstol = 1.0e-14, reltol = 1.0e-14)
 
+@info "" parameters p_true
 @info "" data_sample
 
 res = ParameterEstimation.estimate(model, measured_quantities, data_sample;
