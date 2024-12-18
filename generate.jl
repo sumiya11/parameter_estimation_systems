@@ -1,7 +1,7 @@
 using Pkg
+Pkg.activate("new")
 
-Pkg.activate("env")
-
+using Revise
 using ParameterEstimation
 
 ParameterEstimation.OUTPUT_DIR[] = "examples/new"
