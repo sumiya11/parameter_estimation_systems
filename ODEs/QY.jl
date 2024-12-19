@@ -11,7 +11,7 @@ D = Differential(t)
 states = [P0, P1, P2, P3, P4, P5]
 parameters = [Ks, M, Mar, alpa, beta, beta_SA, beta_SI, phi, siga1, siga2]
 
-@info "Akt pathway: $(length(states)) states, $(length(parameters)) parameters"
+@info "QY: $(length(states)) states, $(length(parameters)) parameters"
 
 @named model = ODESystem(
         [

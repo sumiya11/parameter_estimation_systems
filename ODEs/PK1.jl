@@ -11,7 +11,7 @@ D = Differential(t)
 states = [x1, x2, x3, x4]
 parameters = [k1, k2, k3, k4, k5, k6, k7, s2, s3, u1]
 
-@info "Treatment_io: $(length(states)) states, $(length(parameters)) parameters"
+@info "PK1: $(length(states)) states, $(length(parameters)) parameters"
 
 @named model = ODESystem(
         [
