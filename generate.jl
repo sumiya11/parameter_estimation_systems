@@ -12,7 +12,7 @@ PREFIX = joinpath((@__DIR__), "ODEs")
 for (dir, _, files) in walkdir(PREFIX)
 	for file in files
 		!endswith(file, ".jl") && continue
-		if file in ["mapk_5_outputs_lilliput.jl", "JAK_STAT_1.jl", "PK1.jl", "QY.jl", "SEIR_36_ref.jl", "akt_pathway.jl", "akt_pathway_small.jl", "mapk_5_outputs.jl", "mapk_5_outputs_small.jl", "mapk_5_outputs_tiny.jl", "treatment.jl", "nfkb.jl", "akt_pathway_small.jl", ]
+		if file in ["mapk_5_outputs_lilliput.jl", "JAK_STAT_1.jl", "PK1.jl", "QY.jl", "SEIR_36_ref.jl", "akt_pathway.jl", "akt_pathway_small.jl", "mapk_5_outputs.jl", "mapk_5_outputs_small.jl", "mapk_5_outputs_tiny.jl", "treatment.jl", "nfkb.jl", "akt_pathway_small.jl", ] || occursin("nfkb", file)
 			@info "Skipping $file"
 			continue
 		end

@@ -1,4 +1,4 @@
-# NFkB small
+# NFkB
 # https://github.com/SciML/StructuralIdentifiability.jl/blob/d34f4dd40.158f3e0.1f816bf0.149cf0.1546793f01/benchmarking/IdentifiableFunctions/benchmarks.jl#L1081
 
 using ParameterEstimation
