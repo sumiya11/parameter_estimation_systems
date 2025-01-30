@@ -1,0 +1,10 @@
+
+R, (mu_0,x_0,x_1,x_2) = polynomial_ring(QQ, ["mu_0","x_0","x_1","x_2"], internal_ordering=:degrevlex)
+
+sys = [
+-x_0 + 1,
+-mu_0*x_0 + x_1,
+-x_1 + 2739122458007341//4503599627370496,
+-mu_0*x_1 + x_2,
+]
+
