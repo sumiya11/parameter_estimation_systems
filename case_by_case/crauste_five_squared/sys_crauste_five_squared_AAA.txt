@@ -1,0 +1,46 @@
+System of length 43
+ 43 variables: E_0, E_1, E_2, E_3, E_4, E_5, M_0, M_1, M_2, M_3, M_4, M_5, N_0, N_1, N_2, N_3, N_4, P_0, P_1, P_2, P_3, P_4, P_5, P_6, S_0, S_1, S_2, S_3, S_4, S_5, delta_EL_0, delta_LM_0, delta_NE_0, mu_EE_0, mu_LE_0, mu_LL_0, mu_M_0, mu_N_0, mu_PE_0, mu_PL_0, mu_P_0, rho_E_0, rho_P_0
+
+ 0.631428405782007 - E_0
+ E_1 + E_0*delta_EL_0 + E_0^2*mu_EE_0^2 - N_0*P_0*delta_NE_0 - P_0*E_0*rho_E_0^2
+ 0.441910238246929 - N_0
+ N_1 + N_0*mu_N_0^2 + N_0*P_0*delta_NE_0^2
+ 0.666017567437183 - P_0
+ P_1 + P_0*mu_P_0 - P_0^2*rho_P_0^2 + P_0*E_0*mu_PE_0 + P_0*S_0*mu_PL_0
+ 1.30757311770201 - M_0 - S_0
+ M_1 + M_0*mu_M_0 - S_0*delta_LM_0
+ S_1 - S_0*delta_EL_0 + S_0*delta_LM_0 + S_0^2*mu_LL_0 + S_0*E_0*mu_LE_0
+ -0.670275166559159 - E_1
+ E_2 + E_1*delta_EL_0 + 2*E_0*E_1*mu_EE_0^2 - N_0*P_1*delta_NE_0 - N_1*P_0*delta_NE_0 - P_0*E_1*rho_E_0^2 - P_1*E_0*rho_E_0^2
+ -0.736230220149734 - N_1
+ N_2 + N_1*mu_N_0^2 + N_0*P_1*delta_NE_0^2 + N_1*P_0*delta_NE_0^2
+ -0.548162747777637 - P_1
+ P_2 + P_1*mu_P_0 + P_0*E_1*mu_PE_0 + P_0*S_1*mu_PL_0 + P_1*E_0*mu_PE_0 - 2*P_1*P_0*rho_P_0^2 + P_1*S_0*mu_PL_0
+ -1.04387419109932 - M_1 - S_1
+ S_2 - S_1*delta_EL_0 + S_1*delta_LM_0 + S_0*E_1*mu_LE_0 + S_1*E_0*mu_LE_0 + 2*S_1*S_0*mu_LL_0
+ M_2 + M_1*mu_M_0 - S_1*delta_LM_0
+ 0.726256353339363 - E_2
+ E_3 + 2*E_1^2*mu_EE_0^2 + E_2*delta_EL_0 + 2*E_0*E_2*mu_EE_0^2 - N_0*P_2*delta_NE_0 - 2*N_1*P_1*delta_NE_0 - N_2*P_0*delta_NE_0 - P_0*E_2*rho_E_0^2 - 2*P_1*E_1*rho_E_0^2 - P_2*E_0*rho_E_0^2
+ 1.46881121091545 - N_2
+ N_3 + N_2*mu_N_0^2 + N_0*P_2*delta_NE_0^2 + 2*N_1*P_1*delta_NE_0^2 + N_2*P_0*delta_NE_0^2
+ 0.538251189704748 - P_2
+ P_3 - 2*P_1^2*rho_P_0^2 + P_2*mu_P_0 + P_0*E_2*mu_PE_0 + P_0*S_2*mu_PL_0 + 2*P_1*E_1*mu_PE_0 + 2*P_1*S_1*mu_PL_0 + P_2*E_0*mu_PE_0 - 2*P_2*P_0*rho_P_0^2 + P_2*S_0*mu_PL_0
+ 1.32478872702386 - M_2 - S_2
+ S_3 + 2*S_1^2*mu_LL_0 - S_2*delta_EL_0 + S_2*delta_LM_0 + S_0*E_2*mu_LE_0 + 2*S_1*E_1*mu_LE_0 + S_2*E_0*mu_LE_0 + 2*S_2*S_0*mu_LL_0
+ M_3 + M_2*mu_M_0 - S_2*delta_LM_0
+ -0.509211673378156 - E_3
+ E_4 + E_3*delta_EL_0 + 2*E_0*E_3*mu_EE_0^2 + 6*E_2*E_1*mu_EE_0^2 - N_0*P_3*delta_NE_0 - 3*N_1*P_2*delta_NE_0 - 3*N_2*P_1*delta_NE_0 - N_3*P_0*delta_NE_0 - P_0*E_3*rho_E_0^2 - 3*P_1*E_2*rho_E_0^2 - 3*P_2*E_1*rho_E_0^2 - P_3*E_0*rho_E_0^2
+ -1.24773217527041 - P_3
+ P_4 + P_3*mu_P_0 + P_0*E_3*mu_PE_0 - 2*P_0*P_3*rho_P_0^2 + P_0*S_3*mu_PL_0 + 3*P_1*E_2*mu_PE_0 + 3*P_1*S_2*mu_PL_0 + 3*P_2*E_1*mu_PE_0 - 6*P_2*P_1*rho_P_0^2 + 3*P_2*S_1*mu_PL_0 + P_3*E_0*mu_PE_0 + P_3*S_0*mu_PL_0
+ -3.11181536764377 - M_3 - S_3
+ S_4 - S_3*delta_EL_0 + S_3*delta_LM_0 + S_0*E_3*mu_LE_0 + 3*S_1*E_2*mu_LE_0 + 3*S_2*E_1*mu_LE_0 + 6*S_2*S_1*mu_LL_0 + S_3*E_0*mu_LE_0 + 2*S_3*S_0*mu_LL_0
+ M_4 + M_3*mu_M_0 - S_3*delta_LM_0
+ 4.91102920252404 - P_4
+ P_5 - 6*P_2^2*rho_P_0^2 + P_4*mu_P_0 + P_0*E_4*mu_PE_0 - 2*P_0*P_4*rho_P_0^2 + P_0*S_4*mu_PL_0 + 4*P_1*E_3*mu_PE_0 - 8*P_1*P_3*rho_P_0^2 + 4*P_1*S_3*mu_PL_0 + 6*P_2*E_2*mu_PE_0 + 6*P_2*S_2*mu_PL_0 + 4*P_3*E_1*mu_PE_0 + 4*P_3*S_1*mu_PL_0 + P_4*E_0*mu_PE_0 + P_4*S_0*mu_PL_0
+ 12.7940495987957 - M_4 - S_4
+ M_5 + M_4*mu_M_0 - S_4*delta_LM_0
+ S_5 + 6*S_2^2*mu_LL_0 - S_4*delta_EL_0 + S_4*delta_LM_0 + S_0*E_4*mu_LE_0 + 4*S_1*E_3*mu_LE_0 + 6*S_2*E_2*mu_LE_0 + 4*S_3*E_1*mu_LE_0 + 8*S_3*S_1*mu_LL_0 + S_4*E_0*mu_LE_0 + 2*S_4*S_0*mu_LL_0
+ -21.6881810550934 - P_5
+ P_6 + P_5*mu_P_0 + P_0*E_5*mu_PE_0 - 2*P_0*P_5*rho_P_0^2 + P_0*S_5*mu_PL_0 + 5*P_1*E_4*mu_PE_0 - 10*P_1*P_4*rho_P_0^2 + 5*P_1*S_4*mu_PL_0 + 10*P_2*E_3*mu_PE_0 - 20*P_2*P_3*rho_P_0^2 + 10*P_2*S_3*mu_PL_0 + 10*P_3*E_2*mu_PE_0 + 10*P_3*S_2*mu_PL_0 + 5*P_4*E_1*mu_PE_0 + 5*P_4*S_1*mu_PL_0 + P_5*E_0*mu_PE_0 + P_5*S_0*mu_PL_0
+ E_5 + 6*E_2^2*mu_EE_0^2 + E_4*delta_EL_0 + 2*E_0*E_4*mu_EE_0^2 + 8*E_1*E_3*mu_EE_0^2 - N_0*P_4*delta_NE_0 - 4*N_1*P_3*delta_NE_0 - 6*N_2*P_2*delta_NE_0 - 4*N_3*P_1*delta_NE_0 - N_4*P_0*delta_NE_0 - P_0*E_4*rho_E_0^2 - 4*P_1*E_3*rho_E_0^2 - 6*P_2*E_2*rho_E_0^2 - 4*P_3*E_1*rho_E_0^2 - P_4*E_0*rho_E_0^2
+ N_4 + N_3*mu_N_0^2 + N_0*P_3*delta_NE_0^2 + 3*N_1*P_2*delta_NE_0^2 + 3*N_2*P_1*delta_NE_0^2 + N_3*P_0*delta_NE_0^2
