@@ -1,5 +1,5 @@
 using Pkg
-Pkg.activate("new")
+Pkg.activate("env")
 
 using Revise
 using ParameterEstimation
