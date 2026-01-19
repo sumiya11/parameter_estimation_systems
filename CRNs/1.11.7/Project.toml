@@ -1,0 +1,6 @@
+[deps]
+Catalyst = "479239e8-5488-4da2-87a7-35f2df7eef83"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+ModelingToolkit = "961ee093-0014-501f-94e3-6117800e7a78"
+OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
+ParameterEstimation = "b4cd1eb8-1e24-11e8-3319-93036a3eb9f3"

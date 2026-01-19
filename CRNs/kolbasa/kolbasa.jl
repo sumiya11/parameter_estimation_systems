@@ -5,7 +5,7 @@ solver = Vern9()
 using Catalyst
 using OffsetArrays
 
-n = 5
+n = 3
 t = default_t()
 
 # states
