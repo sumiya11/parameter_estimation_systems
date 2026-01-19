@@ -1,0 +1,11 @@
+CONFIG
+MPTYPE: 2;
+END;
+variable_group mu_0, x_0, x_1, x_2;
+function f1, f2, f3, f4, f5;
+f1 = 1.563 - x_0 - x_0^2;
+f2 = x_1 + x_0*mu_0;
+f3 = -1.11703444874792 - x_1 - 2*x_1*x_0;
+f4 = x_2 + x_1*mu_0;
+f5 = 1.09776005545341 - x_2 - 2*x_0*x_2 - 2*x_1^2;
+END

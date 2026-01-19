@@ -1,7 +1,7 @@
 using RationalUnivariateRepresentation, RS, AbstractAlgebra
 
 # Load system
-sys = include("case_by_case/nfkb_lilliput/sys_nfkb_lilliput_AAA_abstract_algebra.txt")
+sys = include("case_by_case/crn/sys_crn_AAA_abstract_algebra.txt")
 
 # Round coefficients to 4 "digits"
 sys_orig = sys

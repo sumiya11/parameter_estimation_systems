@@ -19,6 +19,21 @@ parameters = [k1, k2, k3, k4, k5, k6]
                              D(x6) ~ -k4 * x6 - k5 * x6 + k6 * x3 * x5,
                          ], t, states, parameters)
 measured_quantities = [y1 ~ x3, y2 ~ x2]
+# We know x2, x3, and their derivatives
+# Alexey: Linear in x1,...,x6 if we substitute numbers in x2,x3.
+
+#=
+x' = a*x           D(x) ~ a*x
+y  = x^2 + x       y ~ x^2 + x
+
+y' = 2 x x' + x'
+
+x1 = a*x0        
+y0 = x0^2 + x0       
+y1 = 2 x x1 + x1
+
+
+=#
 
 ic = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
 p_true = [0.03, 0.02, 0.05, 0.03, 0.02, 0.05] # True Parameters

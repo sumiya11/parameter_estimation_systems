@@ -1,0 +1,4 @@
+[deps]
+ParameterEstimation = "b4cd1eb8-1e24-11e8-3319-93036a3eb9f3"
+SIAN = "cf7bdac0-b945-4905-b5ad-bc3f1a757483"
+StructuralIdentifiability = "220ca800-aa68-49bb-acd8-6037fa93a544"
