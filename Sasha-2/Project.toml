@@ -1,0 +1,3 @@
+[deps]
+Catalyst = "479239e8-5488-4da2-87a7-35f2df7eef83"
+ParameterEstimation = "b4cd1eb8-1e24-11e8-3319-93036a3eb9f3"
