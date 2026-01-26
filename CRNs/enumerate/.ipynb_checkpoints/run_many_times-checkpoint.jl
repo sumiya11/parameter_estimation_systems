@@ -61,11 +61,12 @@ begin
     @assert collect(p) == [(i, j) for i in 1:10 for j in 'a':'z']
 end
 
-
 function is_correct_stoichiometry(two_mat)
     ok(m) = all(col -> sum(col) > 0, eachcol(m))
     return ok(two_mat[1]) && ok(two_mat[2])
 end
+
+only_two(mat) = all(c -> length(findall(>(0), c)) <= 2, eachcol(mat))
 
 function handle_example(X, K_val, K, Y, two_mat, n_observed, index)
     mn = MatrixNetwork(K_val, two_mat[1], two_mat[2]; species = X, params = K)
@@ -102,7 +103,8 @@ function run_many_times(
                 range = 0:1,
                 n_observed = 1,
                 symbolic_rate = [true for _ in 1:m_reactions],
-                how_many = :all # :all or a number
+                how_many = :all, # :all or a number,
+                predicate = (mat) -> true
     )
     @eval t = default_t()
     
@@ -136,8 +138,10 @@ function run_many_times(
     if how_many == :all
     @showprogress enabled=true showspeed=true for (i, mat) in enumerate(two_matrices)
         if is_correct_stoichiometry(mat)
+        if predicate(mat)
         result = handle_example(X, K_val, K, Y, mat, n_observed, i)
         push!(data, [mat, result])
+        end
         end
     end
     else
@@ -145,8 +149,10 @@ function run_many_times(
     @showprogress enabled=true showspeed=true for idx in index
         mat = two_matrices[idx]
         if is_correct_stoichiometry(mat)
+        if predicate(mat)
         result = handle_example(X, K_val, K, Y, mat, n_observed, idx)
         push!(data, [mat, result])
+        end
         end
     end
     end
@@ -165,4 +171,12 @@ q3 = data[findall(==(3), map(x -> length(x[2][end]), data))]
 all(x -> x[2][3]["identifiability_nemo"]["nonidentifiable"] |> isempty, q3)
 
 data = run_many_times(2,3,range=0:1, symbolic_rate=[false,false,false]);
+
+only_two(mat) = all(c -> length(findall(>(0), c)) <= 2, eachcol(mat))
+
+only_two(mat) = all(c -> sum(c) <= 2, eachcol(mat))
+@assert only_two([1 0 0; 0 0 1; 1 0 0;])
+@assert !only_two([1 0 0; 1 0 1; 1 0 0;])
+
+data = run_many_times(4,4,range=0:1, how_many=:all, symbolic_rate=[false for _ in 1:4], predicate=(mat) -> only_two(mat[1]) && only_two(mat[2]));
 =#
