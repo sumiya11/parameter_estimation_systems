@@ -40,11 +40,15 @@ function Base.iterate(S::IteratorProduct, state=1)
     if state > length(S)
         return nothing # Signals the end of iteration
     else
-        i1 = div(state - 1, length(S.I2)) + 1
-        i2 = state - (i1 - 1)*length(S.I2)
         # Returns a tuple of the current value and the next state
-        return ((S.I1[i1], S.I2[i2]), state + 1)
+        return (S[state], state + 1)
     end
+end
+
+function Base.getindex(S::IteratorProduct, i::Int)
+    i1 = div(i - 1, length(S.I2)) + 1
+    i2 = i - (i1 - 1)*length(S.I2)
+    return (S.I1[i1], S.I2[i2])
 end
 
 Base.length(S::IteratorProduct) = length(S.I1)*length(S.I2)
@@ -97,7 +101,8 @@ function run_many_times(
                 m_reactions;
                 range = 0:1,
                 n_observed = 1,
-                symbolic_rate = [true for _ in 1:m_reactions]
+                symbolic_rate = [true for _ in 1:m_reactions],
+                how_many = :all # :all or a number
     )
     @eval t = default_t()
     
@@ -128,11 +133,22 @@ function run_many_times(
     )
     @info "There are $(length(two_matrices)) combinations to consider."
 
+    if how_many == :all
     @showprogress enabled=true showspeed=true for (i, mat) in enumerate(two_matrices)
         if is_correct_stoichiometry(mat)
         result = handle_example(X, K_val, K, Y, mat, n_observed, i)
         push!(data, [mat, result])
         end
+    end
+    else
+    index = rand(1:length(two_matrices), how_many)
+    @showprogress enabled=true showspeed=true for idx in index
+        mat = two_matrices[idx]
+        if is_correct_stoichiometry(mat)
+        result = handle_example(X, K_val, K, Y, mat, n_observed, idx)
+        push!(data, [mat, result])
+        end
+    end
     end
 
     data 
